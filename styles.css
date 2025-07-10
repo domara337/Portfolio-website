@@ -1,0 +1,234 @@
+
+
+.navbar-toggler{
+background-color: aliceblue;
+}
+
+
+
+.c1,.col1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20%;
+    
+}
+
+
+.c2,.col2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20%;
+    
+}
+
+.title{
+    font-size:  4vw;
+}
+
+.personal_title{
+    font-size: 2vw;;
+}
+
+
+.bi-facebook{
+    width: 5vw;
+    height: 3;
+    margin-top: 1rem;
+}
+
+
+.c1> .btn-dark{
+    width: 10em;
+    margin: 10px 0px 0px 0px; 
+    
+}
+
+.last-name{
+    color: yellow;
+    font-style: italic;
+}
+
+.personal_title1{
+    color: #ff0000;
+    font-style: italic;
+}
+
+
+
+/* .row{
+    background-image: url(./images/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+} */
+
+/*skills.html*/
+section{
+    background-image: url(./images/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* make the wrapper fill the screen */
+.main {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* each section is exactly half the viewport */
+  .icons-grid,
+  .icons-grid2 {
+    flex: 1 1 50vh !important;     /* grow/shrink to exactly 50vh */
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;       /* center the inner .container vertically */
+    padding: 3vh 0;                /* vertical padding relative to viewport */
+  }
+  
+  /* shrink the extra Bootstrap padding, let our vh padding do the work */
+  .icons-grid .container,
+  .icons-grid2 .container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  
+
+  /* 1) Make each grid item wrap in a slightly bigger “card” */
+.icons-grid .row .col,
+.icons-grid2 .row .col {
+  padding: 1rem;          /* more space around each item */
+}
+
+/* 2) Enlarge the icons */
+.icons-grid .row .col img,
+.icons-grid2 .row .col img {
+  width: 25% !important;  /* up from 15% */
+  height: auto !important;
+}
+
+/* 3) Bump up the headings */
+.icons-grid .row .col h3,
+.icons-grid2 .row .col h3 {
+  font-size: 1.25rem;     /* up from fs-4 (~1.125rem) */
+}
+
+/* 4) Bump up the description text */
+.icons-grid .row .col p,
+.icons-grid2 .row .col p {
+  font-size: 1rem;        /* increase body copy */
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+/* 5) (Optional) Increase gap between columns & rows */
+.icons-grid .row,
+.icons-grid2 .row {
+  gap: 2rem;              /* instead of default g-4 (~1.5rem) */
+}
+
+
+
+/*experience.html*/
+
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #dee2e6;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+.timeline-item {
+  position: relative;
+  margin: 2rem 0;
+}
+.timeline-item-left, .timeline-item-right {
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  position: relative;
+  width: 45%;
+}
+.timeline-item-left {
+  left: 0;
+}
+.timeline-item-right {
+  left: 55%;
+}
+.timeline-date {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0d6efd;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .title {
+      font-size: 6vw;
+    }
+
+    .personal_title{
+        font-size: 8vw;
+    }
+   .col1>.txt{
+    border-top: black 3px;
+   }
+  }
+
+  
+@media (max-width: 768px) {
+  .timeline::after {
+    left: 8px;
+  }
+  .timeline-item-left, .timeline-item-right {
+    width: 100%;
+    left: 20px;
+  }
+  .timeline-item-right {
+    left: 20px;
+  }
+  .timeline-date {
+    left: 20px;
+    transform: translateX(0);
+  }
+}
+
+
+  @media screen and (max-width: 1180px) {
+    .title{
+      font-size:8vw;
+    }
+
+    .personal_title{
+        font-size:5vw;
+    }
+
+    
+  }
