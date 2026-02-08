@@ -1,0 +1,404 @@
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fade-in animation for page load */
+body {
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.navbar-toggler{
+background-color: aliceblue;
+}
+
+/* Navbar animations */
+.navbar {
+    transition: all 0.3s ease;
+}
+
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #000;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+
+
+.c1,.col1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20%;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.c2,.col2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20%;
+    animation: slideInRight 0.8s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.title{
+    font-size:  4vw;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.personal_title{
+    font-size: 2vw;
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+
+.bi-facebook{
+    width: 5vw;
+    height: 3;
+    margin-top: 1rem;
+}
+
+
+.c1> .btn-dark{
+    width: 10em;
+    margin: 10px 0px 0px 0px;
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.c1> .btn-dark:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.last-name{
+    color: yellow;
+    font-style: italic;
+    display: inline-block;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ffff00;
+    }
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffff00;
+    }
+}
+
+.personal_title1{
+    color: #ff0000;
+    font-style: italic;
+}
+
+
+
+/* .row{
+    background-image: url(./images/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+} */
+
+/*skills.html*/
+section{
+    background-image: url(./images/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* About Me section animations */
+.txt {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.txt h1 {
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.txt p {
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+/* make the wrapper fill the screen */
+.main {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* each section is exactly half the viewport */
+  .icons-grid,
+  .icons-grid2 {
+    flex: 1 1 50vh !important;     /* grow/shrink to exactly 50vh */
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;       /* center the inner .container vertically */
+    padding: 3vh 0;                /* vertical padding relative to viewport */
+  }
+  
+  /* shrink the extra Bootstrap padding, let our vh padding do the work */
+  .icons-grid .container,
+  .icons-grid2 .container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  
+
+  /* 1) Make each grid item wrap in a slightly bigger "card" */
+.icons-grid .row .col,
+.icons-grid2 .row .col {
+  padding: 1rem;          /* more space around each item */
+  transition: transform 0.3s ease;
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.icons-grid .row .col:nth-child(1) { animation-delay: 0.1s; }
+.icons-grid .row .col:nth-child(2) { animation-delay: 0.2s; }
+.icons-grid .row .col:nth-child(3) { animation-delay: 0.3s; }
+.icons-grid .row .col:nth-child(4) { animation-delay: 0.4s; }
+.icons-grid .row .col:nth-child(5) { animation-delay: 0.5s; }
+.icons-grid .row .col:nth-child(6) { animation-delay: 0.6s; }
+.icons-grid .row .col:nth-child(7) { animation-delay: 0.7s; }
+
+.icons-grid2 .row .col:nth-child(1) { animation-delay: 0.1s; }
+.icons-grid2 .row .col:nth-child(2) { animation-delay: 0.2s; }
+.icons-grid2 .row .col:nth-child(3) { animation-delay: 0.3s; }
+.icons-grid2 .row .col:nth-child(4) { animation-delay: 0.4s; }
+
+.icons-grid .row .col:hover,
+.icons-grid2 .row .col:hover {
+  transform: translateY(-5px);
+}
+
+/* 2) Enlarge the icons */
+.icons-grid .row .col img,
+.icons-grid2 .row .col img {
+  width: 25% !important;  /* up from 15% */
+  height: auto !important;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.icons-grid .row .col img:hover,
+.icons-grid2 .row .col img:hover {
+  transform: scale(1.15) rotate(5deg);
+  filter: brightness(1.2);
+}
+
+/* Portfolio image animation */
+.c2 img, .col2 img {
+  transition: transform 0.4s ease;
+}
+
+.c2 img:hover, .col2 img:hover {
+  transform: scale(1.05);
+}
+
+/* 3) Bump up the headings */
+.icons-grid .row .col h3,
+.icons-grid2 .row .col h3 {
+  font-size: 1.25rem;     /* up from fs-4 (~1.125rem) */
+}
+
+/* 4) Bump up the description text */
+.icons-grid .row .col p,
+.icons-grid2 .row .col p {
+  font-size: 1rem;        /* increase body copy */
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+/* 5) (Optional) Increase gap between columns & rows */
+.icons-grid .row,
+.icons-grid2 .row {
+  gap: 2rem;              /* instead of default g-4 (~1.5rem) */
+}
+
+
+
+/*experience.html*/
+
+/* Footer social icons animation */
+footer .nav a {
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+footer .nav a:hover {
+  transform: translateY(-3px) scale(1.2);
+}
+
+footer .nav a svg {
+  transition: fill 0.3s ease;
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #dee2e6;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+.timeline-item {
+  position: relative;
+  margin: 2rem 0;
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.2s; }
+.timeline-item:nth-child(3) { animation-delay: 0.3s; }
+.timeline-item:nth-child(4) { animation-delay: 0.4s; }
+.timeline-item:nth-child(5) { animation-delay: 0.5s; }
+
+.timeline-item-left, .timeline-item-right {
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  position: relative;
+  width: 45%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item-left:hover, .timeline-item-right:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.timeline-item-left {
+  left: 0;
+}
+.timeline-item-right {
+  left: 55%;
+}
+.timeline-date {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0d6efd;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .title {
+      font-size: 6vw;
+    }
+
+    .personal_title{
+        font-size: 8vw;
+    }
+   .col1>.txt{
+    border-top: black 3px;
+   }
+  }
+
+  
+@media (max-width: 768px) {
+  .timeline::after {
+    left: 8px;
+  }
+  .timeline-item-left, .timeline-item-right {
+    width: 100%;
+    left: 20px;
+  }
+  .timeline-item-right {
+    left: 20px;
+  }
+  .timeline-date {
+    left: 20px;
+    transform: translateX(0);
+  }
+}
+
+
+  @media screen and (max-width: 1180px) {
+    .title{
+      font-size:8vw;
+    }
+
+    .personal_title{
+        font-size:5vw;
+    }
+
+    
+  }
